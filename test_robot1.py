@@ -10,8 +10,7 @@ needed to return the robot to its starting point. The output should be an intege
 """
 
 
-
-#clean up instructions
+#clean up instructions - produces a list with non-valid instructions removed
 def cleanUp(directions):
     seperated = []
     for i in directions:
@@ -19,15 +18,12 @@ def cleanUp(directions):
             seperated.append(i)
     return seperated
 
-print(cleanUp('LFxYZR'))
-
-
-#calculate current direction
-
 def test_data_cleanup():
     assert cleanUp('LFxYZR') == ['L','F','R']
+    assert cleanUp('RFL') == ['R', 'F', 'L']
+    assert cleanUp('dhehrgrgr') == []
         
-
+#calculate current direction
 
  
 #calculate position on an x/y axis
