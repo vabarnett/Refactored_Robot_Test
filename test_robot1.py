@@ -9,9 +9,17 @@ with an input of instructions eg. 'LFRRFLLLF' calculate and return the minimum n
 needed to return the robot to its starting point. The output should be an integer.
 """
 
+
+
 #clean up instructions
 def cleanUp(directions):
-    return ['L','F','R']
+    seperated = []
+    for i in directions:
+        if i in ["L","F","R"]:
+            seperated.append(i)
+    return seperated
+
+print(cleanUp('LFxYZR'))
 
 
 #calculate current direction
